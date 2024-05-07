@@ -38,12 +38,13 @@ class Cell():
     target_x = (to_cell._x1 + to_cell._x2) / 2
     target_y = (to_cell._y1 + to_cell._y2) / 2
 
-    line = Line(Point(curr_x, curr_y), Point(target_x, target_y))
+    fill_color = "red"
+    if undo:
+       fill_color = "gray"
 
-    if undo is True:
-      self._win.draw_line(line, "red")
-    else:
-      self._win.draw_line(line, "gray")
+    line = Line(Point(curr_x, curr_y), Point(target_x, target_y))
+    self._win.draw_line(line, fill_color)
+
        
 
 
