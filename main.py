@@ -5,33 +5,23 @@ from cell import Cell
 def main():
   win = Window(800, 600)
 
-  # # Create Points
-  # point1 = Point(50, 50)
-  # point2 = Point(200, 200)
-  # point3 = Point(100, 300)
+    # Create cells
+  cell1 = Cell(win)
+  cell1.draw(50, 50, 100, 100)
 
-  # # Create Lines
-  # line1 = Line(point1, point2)
-  # line2 = Line(point2, point3)
+  cell2 = Cell(win)
+  cell2.draw(125, 125, 200, 200)
 
-  # # Draw Lines
-  # win.draw_line(line1, "black")
-  # win.draw_line(line2, "red")
+  cell3 = Cell(win)
+  cell3.draw(225, 225, 250, 250)
 
-  c = Cell(win)
-  c.has_left_wall = False
-  c.draw(50, 50, 100, 100)
+  cell4 = Cell(win)
+  cell4.draw(300, 300, 500, 500)
 
-  c = Cell(win)
-  c.draw(125, 125, 200, 200)
-
-  c = Cell(win)
-  c.has_bottom_wall = False
-  c.draw(225, 225, 250, 250)
-
-  c = Cell(win)
-  c.has_top_wall = False
-  c.draw(300, 300, 500, 500)
+  # Draw lines between cells
+  cell1.draw_move(cell2)
+  cell2.draw_move(cell3)
+  cell3.draw_move(cell4, undo=True)  # Test undo flag
 
   win.wait_for_close()
 
