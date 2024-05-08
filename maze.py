@@ -120,4 +120,4 @@ class Maze:
   def _reset_cells_visited(self):
     for col in self._cells:
        for cell in col:
-          cell.is_visited = False
+          cell.visited = False
