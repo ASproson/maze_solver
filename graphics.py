@@ -26,6 +26,17 @@ class Window():
   def draw_line(self, line, fill_color="black"):
     line.draw(self.__canvas, fill_color)
 
+  # def wait_for_click(self):
+  #       self.click_occurred = False
+  #       self.__canvas.bind("<Button-1>", self.__on_click)
+  #       while not self.click_occurred:
+  #           self.__root.update_idletasks()
+  #           self.__root.update()
+
+  # def __on_click(self, event):
+  #       self.click_occurred = True
+  #       self.__canvas.unbind("<Button-1>") 
+
 class Point():
   def __init__(self, x, y):
     self.x = x
