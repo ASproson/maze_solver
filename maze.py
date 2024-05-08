@@ -23,11 +23,12 @@ class Maze:
     self._cell_size_y = cell_size_y
     self._win = win
 
+    if seed:
+      random.seed(seed)
+
     self._create_cells()
     self._break_entrance_and_exit()
-
-    if seed:
-       random.seed(seed)
+    self._break_walls_r(0, 0)
 
   def _create_cells(self):
     for i in range(self._num_cols):
@@ -87,7 +88,7 @@ class Maze:
          to_visit.append((i + 1, j))
 
       if len(to_visit) == 0:
-        current._draw_cell(i, j)
+        self._draw_cell(i, j)
         return
       
       next_cell = random.choice(to_visit)
