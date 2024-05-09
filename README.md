@@ -2,6 +2,11 @@
 
 This project implements an DFS algorithm to solve randomly generated mazes in Python
 
+# Demonstration
+![Animation](https://github.com/ASproson/maze_solver/assets/77736272/19a8a712-554d-439f-9e1d-00ac795d10e4)
+
+![Animation2](https://github.com/ASproson/maze_solver/assets/77736272/a9c9b860-4f2b-49b7-a757-74d7e0738057)
+
 ## Technical Walkthrough
 
 ### graphics.py
@@ -23,8 +28,3 @@ The rows are specified as `i`, with columns denoting `j`. To move up we have to 
 ### main.py
 
 Here we pass the core parameters such as number of rows/columns, and the overall height of the canvas we would like to draw to. Additionally, there is a `seed` that we can pass that fixes the randomization to a specific pattern, which I predominately used for testing purposes
-
-# Demonstration
-![Animation](https://github.com/ASproson/maze_solver/assets/77736272/19a8a712-554d-439f-9e1d-00ac795d10e4)
-
-![Animation2](https://github.com/ASproson/maze_solver/assets/77736272/a9c9b860-4f2b-49b7-a757-74d7e0738057)
