@@ -4,15 +4,15 @@ This project implements an DFS algorithm to solve randomly generated mazes in Py
 
 ## Technical Walkthrough
 
-#### graphics.py
+### graphics.py
 
 Here we establish the `Window` class which is our browser instance. We then draw to that `Canvas` using various `Lines` that are drawn from `Point` to `Point`
 
-#### cell.py
+### cell.py
 
 This file then makse use of the `Line` and `Point` methods to both draw all the cells in the grid and the 'solving' line. Note the use of `wall_color(self.has_right_wall)`, this is what we use to 'color' a line to determine whether or not it has a wall. To be more specific a wall is _always_ drawn regardless, but by changing its color to white it provides a better visualization
 
-#### maze.py
+### maze.py
 
 This creates the grid and generates the number of cells required based on the specified grid height and width. The `animate()` method is what provides the 'drawing' animation by calling `redraw()`, which allows us to visualize both the initial grid and the grid updates as the algorithm solves the maze
 
@@ -20,7 +20,7 @@ The _break_ and _solve_ methods are the core of the DFS algorithm, and calculate
 
 The rows are specified as `i`, with columns denoting `j`. To move up we have to _subtract_ from `i` (rows) so that we select the row above, to move left we have to subtract of `j` (cols). The main technical challenge here was ensuring this calculation always remained within the index bounds of list
 
-#### main.py
+### main.py
 
 Here we pass the core parameters such as number of rows/columns, and the overall height of the canvas we would like to draw to. Additionally, there is a `seed` that we can pass that fixes the randomization to a specific pattern, which I predominately used for testing purposes
 
