@@ -11,7 +11,7 @@ This project implements an DFS algorithm to solve randomly generated mazes in Py
 
 ### graphics.py
 
-Here we establish the `Window` class which is our browser instance. We then draw to that `Canvas` using various `Lines` that are drawn from `Point` to `Point`
+Here we establish the `Window` class which is our GUI instance. We then draw to that `Canvas` using various `Lines` that are drawn from `Point` to `Point`
 
 ### cell.py
 
